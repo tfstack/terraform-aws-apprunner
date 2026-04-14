@@ -88,7 +88,7 @@ variable "health_check_path" {
 }
 
 variable "health_check_protocol" {
-  description = "The IP protocol that App Runner uses to perform health checks for your service"
+  description = "The protocol App Runner uses to perform health checks for your service"
   type        = string
   default     = "HTTP"
   validation {
