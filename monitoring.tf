@@ -172,12 +172,12 @@ resource "aws_cloudwatch_dashboard" "app_runner" {
             metrics = concat(
               # Response time and error rate (for web/API apps)
               try(var.monitoring_config.application_type, "web") == "web" || try(var.monitoring_config.application_type, "web") == "api" ? [
-                ["AWS/AppRunner", "RequestLatency", "ServiceName", aws_apprunner_service.this.service_id],
+                ["AWS/AppRunner", "RequestLatency", "ServiceName", aws_apprunner_service.this.service_name],
                 [".", "HTTP5xxErrorRate", ".", "."]
               ] : [],
               # Resource utilization (for all apps)
               [
-                ["AWS/AppRunner", "CPUUtilization", "ServiceName", aws_apprunner_service.this.service_id],
+                ["AWS/AppRunner", "CPUUtilization", "ServiceName", aws_apprunner_service.this.service_name],
                 [".", "MemoryUtilization", ".", "."],
                 [".", "ActiveInstances", ".", "."]
               ]

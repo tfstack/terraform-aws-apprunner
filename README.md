@@ -69,7 +69,7 @@ No modules.
 | <a name="input_enable_www_subdomain"></a> [enable\_www\_subdomain](#input\_enable\_www\_subdomain) | Whether to enable www subdomain for the custom domain | `bool` | `false` | no |
 | <a name="input_enable_xray_tracing"></a> [enable\_xray\_tracing](#input\_enable\_xray\_tracing) | Whether to enable AWS X-Ray tracing for the App Runner service | `bool` | `false` | no |
 | <a name="input_health_check_path"></a> [health\_check\_path](#input\_health\_check\_path) | The URL that App Runner should send a request to, using an HTTP GET request, to determine if this service is healthy | `string` | `"/"` | no |
-| <a name="input_health_check_protocol"></a> [health\_check\_protocol](#input\_health\_check\_protocol) | The IP protocol that App Runner uses to perform health checks for your service | `string` | `"HTTP"` | no |
+| <a name="input_health_check_protocol"></a> [health\_check\_protocol](#input\_health\_check\_protocol) | The protocol App Runner uses to perform health checks for your service | `string` | `"HTTP"` | no |
 | <a name="input_healthy_threshold"></a> [healthy\_threshold](#input\_healthy\_threshold) | The number of consecutive checks that must succeed before App Runner decides that the service is healthy | `number` | `1` | no |
 | <a name="input_iam_role_name"></a> [iam\_role\_name](#input\_iam\_role\_name) | Name of the IAM role for App Runner | `string` | `null` | no |
 | <a name="input_instance_role_arn"></a> [instance\_role\_arn](#input\_instance\_role\_arn) | ARN of an existing IAM role for App Runner instances | `string` | `null` | no |
